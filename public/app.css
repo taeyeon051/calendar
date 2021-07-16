@@ -1,0 +1,227 @@
+@font-face {
+    font-family: "font";
+    src: url("/PoiretOne-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "font", serif;
+}
+
+body { background-color: #343270; }
+
+
+/* background-color */
+
+.bgc-blue { background-color: #606fee; }
+.bgc-darkblue { background-color: #303658; }
+.bgc-white { background-color: #fbfbfb; }
+.bgc-green { background-color: #1dd1a1; }
+.bgc-yellow { background-color: #f3c227; }
+.bgc-red { background-color: #ff6b6b; }
+
+
+/* text-color */
+
+.text-bold { font-weight: bold; }
+.text-blue { color: #606fee; }
+.text-darkblue { color: #303658; }
+.text-white { color: #fbfbfb; }
+.text-green { color: #1dd1a1; }
+.text-yellow { color: #f3c227; }
+.text-red { color: #ff6b6b; }
+.text-gray { color: #aaa; }
+.text-middle { vertical-align: middle; }
+
+
+/* btn */
+
+.btn-red {border: 1px solid #ff6b6b; color: #ff6b6b; transition: .7s; }
+.btn-red:hover { color: #fbfbfb; background-color: #ff6b6b; }
+.btn-yellow {border: 1px solid #f3c227; color: #f3c227; transition: .7s; }
+.btn-yellow:hover { color: #303658; background-color: #f3c227; }
+.btn-blue {border: 1px solid #606fee; color: #606fee; transition: .7s; }
+.btn-blue:hover { color: #fbfbfb; background-color: #606fee; }
+.btn-green {border: 1px solid #1dd1a1; color: #1dd1a1; transition: .7s; }
+.btn-green:hover { color: #fbfbfb; background-color: #1dd1a1; }
+
+
+/* container */
+
+.container {
+    display: grid;
+    grid-template-rows: 150px 700px 80px;
+}
+
+
+/* header */
+
+.btn-box {
+    position: absolute;
+    bottom: 20px;
+    right: 50px;
+}
+
+
+/* font */
+
+.font-28 { font-size: 28px; }
+
+
+/* schedule */
+
+.schedule { background-color: #606fee; }
+
+.schedule * {
+    color: #fbfbfb;
+    font-weight: bold;
+}
+
+#scheduleList {
+    width: 75%;
+    height: 420px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#scheduleList::-webkit-scrollbar,
+textarea::-webkit-scrollbar {
+    width: 10px;
+}
+
+#scheduleList::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb {
+    background-color: #303658;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    border-radius: 15px;
+}
+
+#scheduleList>li {
+    margin: 20px 0;
+    cursor: pointer;
+    padding-right: 10px;
+    word-break: break-all;
+}
+
+
+/* cld */
+
+#cldSection {
+    display: grid;
+    grid-template-rows: 1fr 7fr 1fr;
+}
+
+.cld {
+    display: grid;
+    grid-template-rows: 150px 450px 100px;
+}
+
+.cld-header>div {
+    cursor: default;
+}
+
+.cld_body {
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    grid-template-columns: 500px;
+    justify-content: center;
+}
+
+.week {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    align-items: center;
+    font-weight: bold;
+}
+
+.week>div {
+    color: #fbfbfb;
+}
+
+#days>div {
+    width: calc(100% / 7);
+    transition: .7s;
+}
+
+.week>div,
+#days>div {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.day-green {
+    background-color: #1dd1a1;
+}
+
+.day-yellow {
+    background-color: #f3c227;
+}
+
+.day-red {
+    background-color: #ff6b6b;
+}
+
+
+/* alert */
+
+#alert {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+footer>p { font-family: none; }
+
+
+/* popup */
+
+.popup {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 2000;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner {
+    width: 800px;
+    height: 500px;
+    padding: 3rem 4rem;
+    position: relative;
+    background-color: #fff;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 1.5rem; right: 1.5rem;
+    font-size: 24px;
+    padding: 0 0.8rem;
+}
+
+textarea { resize: none; }
+
+.exp-share { font-size: 12px; }
+
+#schedule-register-btn,
+#schedule-modify-btn, 
+#schedule-delete-btn {
+    position: absolute;
+    bottom: 2rem; right: 4rem;
+    font-size: 14px;
+}
+
+#schedule-modify-btn {
+    right: 10rem;
+}
